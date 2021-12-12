@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VeoVeo.LA</title>
+</head>
+
+<body>
+    <!-- MENÚ PRINCIPAL -->
+    <header class="header">
+        <img src="img/veoveo-logo-color.png" class="header__logo logo-rotate" alt="veoveo-logo">
+        <nav class="header__nav">
+            <ul class="header__nav--ul">
+                <li class="header__nav--li"><a href="" class="activa">Inicio</a></li>
+                <li class="header__nav--li"><a href="nosotros.html">Nosotros</a></li>
+                <li class="header__nav--li"><a href="reels.html">Reels</a></li>
+                <li class="header__nav--li"><a href="estrenos.html">Estrenos</a></li>
+                <li class="header__nav--li"><a href="newsletter.html">Newsletter</a></li>
+                <li class="header__nav--li"><a href="https://www.instagram.com/veoveo.la/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- GRID -->
+
+    <div id="grilla">
+        <header class="header">
+            <nav class="nav header-grilla">
+                <a href="nosotros.html">
+                    <h3>Nosotros</h3>
+                </a>
+                <a href="reels.html">
+                    <h3>Instagram</h3>
+                </a>
+                <a href="resenas.html">
+                    <h3>Reseñas</h3>
+                </a>
+                <a href="newsletter.html">
+                    <h3>Newsletter</h3>
+                </a>
+            </nav>
+        </header>
+
+        <section id="opciones">
+            <div class="contenido">
+                <ul class="div-inicio--ul">
+                    <li><a href="nosotros.html">
+                            <i class="fas fa-users"></i>
+                            <h3>Nosotros</h3>
+                        </a>
+                    </li>
+                    <li><a href="reels.html">
+                            <i class="fab fa-instagram"></i>
+                            <h3>Instagram</h3>
+                        </a>
+                    </li>
+                    <li><a href="resenas.html">
+                            <i class="fas fa-film"></i>
+                            <h3>Reseñas</h3>
+                        </a>
+                    </li>
+                    <li><a href="newsletter.html">
+                            <i class="far fa-newspaper"></i>
+                            <h3>Newsletter</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <fieldset class="newsForm">
+                <form method="get">
+                    <h3>Inscribite a nuestro newsletter</h3>
+                    <ul class="newsForm--ul">
+                        <li class="newsForm--li">
+                            <label for="nombre_apellido">Nombre:</label>
+                            <input type="text" class="inputTexto" name="nombre_apellido"
+                                placeholder="Ingrese su nombre aquí">
+                        </li>
+                        <li class="newsForm--li">
+                            <label for="nombre_apellido">Apellido:</label>
+                            <input type="text" class="inputTexto" name="nombre_apellido"
+                                placeholder="Ingrese su apellido aquí">
+                        </li>
+                        <li class="newsForm--li">
+                            <legend class="newsForm--legend">Generós de series o peliculas que te gustan</legend>
+                            <ul class="newsForm--ul-listaGeneros">
+                                <li>
+                                    <label for="accion">Acción</label>
+                                    <input type="checkbox" name="genero" value="accion">
+                                </li>
+                                <li>
+                                    <label for="thriller">Thriller</label>
+                                    <input type="checkbox" name="genero" value="thriller">
+                                </li>
+                                <li>
+                                    <label for="suspenso">Suspenso</label>
+                                    <input type="checkbox" name="genero" value="suspenso">
+                                </li>
+                                <li>
+                                    <label for="drama">Drama</label>
+                                    <input type="checkbox" name="genero" value="drama">
+                                </li>
+                                <li>
+                                    <label for="comedia">Comedia</label>
+                                    <input type="checkbox" name="genero" value="comedia">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="newsForm--li">
+                            <legend>Edad</legend>
+                            <select name="talles" class="inputTexto">
+                                <option value="">Selecciona edad</option>
+                                <option value="menos30">Menos de 30</option>
+                                <option value="3039">Entre 30 y 39</option>
+                                <option value="4049">Entre 40 y 49</option>
+                                <option value="mas50">Más de 50</option>
+                            </select>
+                        </li>
+                        <li class="newsForm--li">
+                            <legend>Fecha de nacimiento</legend>
+                            <input type="date" class="inputTexto" id="fechanac" name="fechanac">
+                        </li>
+                        <li class="newsForm--li">
+                            <label for="acepta">Acepta términos y condiciones</label>
+                            <input type="checkbox" name="acepta" value="1">
+                        </li>
+                        <li class="newsForm--li">
+                            <input type="submit" class="botonEnviar" value="Enviar formulario">
+
+                            <input type="reset" class="botonLimpiar" value="Limpiar formulario">
+                        </li>
+                    </ul>
+                </form>
+            </fieldset>
+
+        </section>
+        <nav>
+            <h3 class="div__h3--resenas">Las películas más vistas de Netflix</h3>
+                <ol class="div__ol--resenas">
+                    <li>ALERTA ROJA</li>
+                    <li>A DOS METROS DE TÍ</li>
+                    <li>EL TRANSPORTADOR RECARGADO</li>
+                    <li>THE CROODS</li>
+                    <li>JUEGO DE TRAICIÓN</li>
+                </ol>
+        </nav>
+
+        <aside class="publi">
+            <img src="img/reelveoveo1.jpg" alt="reel-1">
+            <img src="img/reelveoveo2.jpg" alt="reel-2">
+            <img src="img/reelveoveo3.jpg" alt="reel-3">
+        </aside>
+
+        <footer class="footergrid">
+            <p class="textoFooter">&copy; VeoVeo.LA</p>
+        </footer>
+    </div>
+
+    <!-- FOOTER -->
+    
+
+</body>
+
+</html>

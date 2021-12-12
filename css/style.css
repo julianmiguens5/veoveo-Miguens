@@ -1,0 +1,723 @@
+/* CSS GENERAL */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    background-image: url("../img/cinema-with-popcorn-box.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo-rotate{
+    animation-duration: 4s;
+    animation-name: rotarlogo;
+    animation-iteration-count: 2;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+/* DETERMINAMOS EL EFECTO DE LA ANIMACIÓN */
+
+@keyframes rotarlogo {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+#grilla{
+    color: white;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav opciones publicidad"
+    "nav servicios publicidad"
+    "footergrid footergrid footergrid";
+    grid-template-rows: auto 7fr 10fr 75px;
+    grid-template-columns: 25% auto 25%;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    border: 2px dotted red;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    background-color: rgba(255,0,0,0.3);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+/* Establecemos las áreas a trabajar de cada etiqueta */
+
+header{
+    grid-area: header;
+}
+
+section#opciones{
+    grid-area: opciones;
+    margin: auto;
+}
+
+section#servicios{
+    grid-area: servicios;
+}
+
+nav{
+    grid-area: nav;
+    background-color: rgba(0,0,0,0.9);
+    padding: 15px;
+}
+
+aside{
+    grid-area: publicidad;
+    background-color: rgba(0,0,0,0.9);
+    padding: 15px;
+}
+
+.footergrid{
+    position: relative;
+    grid-area: footergrid;
+    background-color: rgba(0,0,0,0.9);
+    bottom: 0;
+    right: 0;
+}
+
+.publi img{
+    width:100%;
+}
+
+.header__logo{
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header__nav{
+    width: 60%;
+    background-color: rgba(100,100,100,0.7);
+    border-radius: 20px;
+    padding: 20px;
+    float: right;
+    border-radius: 0px 0px 0px 20px;
+}
+
+.header__nav--ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.header__nav--li{
+    list-style-type: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+}
+
+.header__nav--li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.header__nav--li a:hover{
+    color: red;
+}
+
+.header__nav--li a.activa{
+    color: #FF3030;
+}
+
+.div-inicio{
+    border: 2px dotted red;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255,0,0,0.3);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+/* FIN CSS GENERAL */
+
+/* CSS INDEX */
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.div-inicio .div-inicio--ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.div-inicio .div-inicio--ul li{
+    list-style-type: none;
+    font-size: 60px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;
+    transition: 0.3s;
+}
+
+.div-inicio .div-inicio--ul li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.div-inicio .div-inicio--ul li:hover{
+    transform: scale(1.05,1.05);
+}
+
+.div-inicio .div-inicio--ul li a:hover{
+    color: red;
+}
+
+.div-inicio .div-inicio--ul h3{
+    font-size: 25px;
+    text-align: center;
+}
+
+#grilla .div-inicio--ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#grilla .div-inicio--ul li{
+    list-style-type: none;
+    font-size: 60px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;
+    transition: 0.3s;
+}
+
+#grilla .div-inicio--ul li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+#grilla .div-inicio--ul li:hover{
+    transform: scale(1.05,1.05);
+}
+
+#grilla .div-inicio--ul li a:hover{
+    color: red;
+}
+
+#grilla .div-inicio--ul h3{
+    font-size: 25px;
+    text-align: center;
+}
+
+.div-inicio h2{
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.div-inicio p{
+    text-align: justify;
+    color: whitesmoke;
+    text-shadow: 2px 2px #000000;
+}
+
+.lista-inicio{
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.lista-inicio ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lista-inicio ul li{
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    margin-bottom: 5px;
+    color: whitesmoke;
+}
+
+/* FIN CSS INDEX */
+
+/* CSS FOOTER */
+footer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 100%;
+}
+
+.textoFooter{
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+/* FIN CSS FOOTER */
+
+/* CSS NEWSLETTER */
+
+fieldset.newsForm{
+    border: none;
+    background-color: rgba(255,0,0,0.3);
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dotted red;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+.newsForm h3{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.newsForm--legend{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.newsForm .inputTexto{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+    margin: 5px;
+}
+
+.newsForm--ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    gap: 15px;
+}
+
+.newsForm--li{
+    list-style-type: none;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+}
+
+.newsForm--ul-listaGeneros{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.newsForm--ul-listaGeneros li{
+    list-style-type: none;
+}
+
+.newsForm .botonEnviar{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.newsForm .botonLimpiar{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* FIN CSS NEWSLETTER */
+
+/* CSS REELS */
+
+.reels{
+    width: 80%;
+    margin: auto;
+    background-color: rgba(255,0,0,0.3);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dotted red;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+.reels h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.reelsGallery{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.reelsGallery img{
+    width: 220px;
+    transition: 0.5s;
+}
+
+.reelsGallery img:hover{
+    transform: rotate(5deg);
+}
+
+/* FIN CSS REELS */
+
+/* CSS RESEÑAS */
+
+.div-resenas{
+    width: 80%;
+    background-color: rgba(255,0,0,0.3);
+    color: white;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dotted red;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+.div__h3--resenas{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.div__ol--resenas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.div__ol--resenas li{
+    padding: 2px;
+    font-size: 12px;
+    margin-left: 15px;
+    
+}
+
+/* FIN CSS RESEÑAS */
+
+/* NOSOTROS */
+
+.div-inicio__h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* FIN NOSOTROS */
+
+/* CSS ESTRENOS */
+
+#grillaestrenos{
+    color: white;
+    display: grid;
+    grid-template-areas: 
+    "nav header publicidad"
+    "nav estrenos publicidad"
+    "footergrid footergrid footergrid";
+    grid-template-rows: auto 7fr 75px;
+    grid-template-columns: 30% auto 30%;
+    grid-row-gap: 0px;
+    border: 2px dotted red;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    background-color: rgba(255,0,0,0.3);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+section#estrenos{
+    grid-area: estrenos;
+    background-color: rgba(255,255,255,0.8);
+}
+
+#estrenos h3 {
+    margin: 10px;
+}
+
+#estrenos span{
+    font-size: 0.7em;
+}
+
+#estrenos .flex-estrenos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+} 
+
+#estrenos li{
+    list-style-type: none;
+}
+
+#estrenos img{
+    width: 200px;
+    transition: 1s;
+}
+
+#estrenos img:hover{
+    width: 100%;
+    position: relative;
+}
+
+.sinopsis-est{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section#servicios{
+    grid-area: servicios;
+}
+
+aside{
+    grid-area: publicidad;
+    background-color: rgba(0,0,0,0.9);
+    padding: 15px;
+}
+
+
+/* CSS PARA MOBILE */
+
+@media only screen and (max-width: 600px) {
+
+    .header__nav{
+        width: 30%;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 50px;
+    }
+    
+    .textoFooter{
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .newsForm{
+        height: 650px;
+    }
+
+    /* GRID CSS MOBILE */
+
+    #grilla{
+        grid-template-areas: 
+        "header header header"
+        "opciones opciones opciones"
+        "nav nav nav"
+        "servicios servicios servicios"
+        "publicidad publicidad publicidad"
+        "footergrid footergrid footergrid";
+        grid-template-rows: auto 5fr 3.5fr 5fr auto 75px;
+        grid-template-columns: 21% auto 21%;
+        grid-row-gap: 0px;
+        border: none;
+        overflow: visible;
+        width: 100%;
+        margin: auto;
+        background-color: rgba(255,0,0,0.3);
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    }
+    
+    .header-grilla{
+        display: none;
+    }
+
+    /* Establecemos las áreas a trabajar de cada etiqueta */
+    
+    header{
+        grid-area: header;
+    }
+    
+    section#opciones{
+        grid-area: opciones;
+        margin: auto;
+    }
+    
+    section#servicios{
+        grid-area: servicios;
+        position: relative;
+    }
+    
+    nav{
+        grid-area: nav;
+        background-color: rgba(0,0,0,0.9);
+        padding: 15px;
+    }
+    
+    aside{
+        grid-area: publicidad;
+        position: relative;
+        background-color: rgba(0,0,0,0.9);
+        padding: 15px;
+    }
+    
+    .footergrid{
+        position: relative;
+        grid-area: footergrid;
+        background-color: rgba(0,0,0,0.9);
+        margin-top: 0px;
+    }
+    
+    .publi img{
+        width:80%;
+        display: block;
+        margin: auto;
+    }
+
+    #grillaestrenos{
+        color: white;
+        display: grid;
+        grid-template-areas: 
+        "header header header header"
+        "estrenos estrenos estrenos estrenos"
+        "nav nav publicidad publicidad"
+        "footergrid footergrid footergrid footergrid";
+        grid-template-rows: auto 7fr 4fr 75px;
+        grid-template-columns: 25% 15% auto 25%;
+        grid-row-gap: 0px;
+        border: none;
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
+        background-color: rgba(255,0,0,0.3);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    }
+    
+    section#estrenos{
+        grid-area: estrenos;
+        background-color: rgba(255,255,255,0.8);
+    }
+    
+    #estrenos h3 {
+        margin: 10px;
+    }
+    
+    #estrenos span{
+        font-size: 0.7em;
+    }
+    
+    #estrenos .flex-estrenos{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+    } 
+    
+    #estrenos li{
+        list-style-type: none;
+    }
+    
+    #estrenos img{
+        width: 200px;
+        transition: 1s;
+    }
+    
+    #estrenos img:hover{
+        width: 100%;
+        position: relative;
+    }
+
+    .div__h3--resenas {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .sinopsis-est{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sinopsis-est p{
+        font-size: 0.8em;
+    }
+    
+    section#servicios{
+        grid-area: servicios;
+        margin: 10px 0px;
+    }
+    
+    aside{
+        grid-area: publicidad;
+        background-color: rgba(0,0,0,0.9);
+        padding: 15px;
+    }
+
+}
