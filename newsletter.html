@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="VEO VEO es la respuesta a esa pregunta que tus amigos y familiares no supieron contestar cuando te recomendaron qué ver. ¿Donde la veo?">
+    <meta name="keywords"
+        content="Donde veo, Peliculas, Series, Drama, Thriller, Suspenso, accion, Comedia, suscribirme, sugerencias peliculas">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Josefin+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VeoVeo.LA - Newsletter</title>
+</head>
+
+<body>
+    <!-- MENÚ PRINCIPAL -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+                <img src="img/veoveo-logo-color.png" class="header__logo logo-rotate" alt="veoveo-logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse menu-derecha" id="navbarNav">
+                    <ul class="navbar-nav espaciado-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link activa" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reels.html">Reels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="estrenos.html">Estrenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="newsletter.html">Newsletter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.instagram.com/veoveo.la/" class="nav-link"><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- FORMULARIO PARA INSCRIPCIÓN A NEWSLETTER -->
+    <section id="newsletter" class="margen-sup">
+        <div class="container">
+            <div class="row div-inicio">
+                <article>
+                    <fieldset class="newsForm">
+                        <form method="get">
+                            <h1>Inscribite a nuestro newsletter y enterate de las últimas sugerencias</h1>
+                            <ul class="newsForm--ul">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <li class="newsForm--li">
+                                            <label for="nombre_apellido">Nombre:</label>
+                                            <input type="text" class="form-control" name="nombre_apellido" id="nombre"
+                                                placeholder="Ingrese su nombre aquí">
+                                        </li>
+                                        <li class="newsForm--li">
+                                            <label for="nombre_apellido">Apellido:</label>
+                                            <input type="text" class="form-control" name="nombre_apellido" id="apellido"
+                                                placeholder="Ingrese su apellido aquí">
+                                        </li>
+                                        <li class="newsForm--li">
+                                            <legend class="newsForm--legend">Generós de series o peliculas que te gustan
+                                            </legend>
+                                            <ul class="newsForm--ul-listaGeneros">
+                                                <li>
+                                                    <label for="accion">Acción</label>
+                                                    <input type="checkbox" name="genero" value="accion">
+                                                </li>
+                                                <li>
+                                                    <label for="thriller">Thriller</label>
+                                                    <input type="checkbox" name="genero" value="thriller">
+                                                </li>
+                                                <li>
+                                                    <label for="suspenso">Suspenso</label>
+                                                    <input type="checkbox" name="genero" value="suspenso">
+                                                </li>
+                                                <li>
+                                                    <label for="drama">Drama</label>
+                                                    <input type="checkbox" name="genero" value="drama">
+                                                </li>
+                                                <li>
+                                                    <label for="comedia">Comedia</label>
+                                                    <input type="checkbox" name="genero" value="comedia">
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <li class="newsForm--li">
+                                            <label>Edad</label>
+                                            <select name="talles" class="form-control" id="edad">
+                                                <option value="">Selecciona edad</option>
+                                                <option value="menos30">Menos de 30</option>
+                                                <option value="3039">Entre 30 y 39</option>
+                                                <option value="4049">Entre 40 y 49</option>
+                                                <option value="mas50">Más de 50</option>
+                                            </select>
+                                        </li>
+                                        <li class="newsForm--li">
+                                            <label>Fecha de nacimiento</label>
+                                            <input type="date" class="form-control" id="fechanac" name="fechanac">
+                                        </li>
+                                        <li class="newsForm--li">
+                                            <label for="acepta">Acepta términos y condiciones <span
+                                                    class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal">VER</span></label>
+                                            <input type="checkbox" name="acepta" value="1">
+                                        </li>
+                                        <li class="newsForm--li">
+                                            <input type="submit" class="btn btn-success" id="guardar" value="Enviar formulario">
+
+                                            <input type="reset" class="btn btn-warning" value="Limpiar formulario">
+                                        </li>
+                                        <div class="mensaje"></div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </form>
+                    </fieldset>
+                </article>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">TERMINOS Y CONDICIONES</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore error iusto quaerat quas
+                        laboriosam, odit laudantium impedit dolorum temporibus dolor incidunt amet qui! Saepe, beatae
+                        exercitationem. Doloribus facilis dolore sunt.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <ul>
+                        <a href="index.html">
+                            <li>Inicio</li>
+                        </a>
+                        <a href="nosotros.html">
+                            <li>Nosotros</li>
+                        </a>
+                        <a href="reels.html">
+                            <li>Reels</li>
+                        </a>
+                        <a href="estrenos.html">
+                            <li>Estrenos</li>
+                        </a>
+                        <a href="newsletter.html">
+                            <li>Newsletter</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <ul>
+                        <li>Estrenos</li>
+                        <li>Clásicos</li>
+                        <li>Peliculas</li>
+                        <li>Series</li>
+                        <li>Documentales</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <ul class="ul-top">
+                        <li>RRSS</li>
+                        <li>Contactános</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12">
+                    <p class="textoFooter">&copy; VeoVeo.LA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

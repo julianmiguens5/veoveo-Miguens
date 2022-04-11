@@ -1,0 +1,475 @@
+@charset "UTF-8";
+.flexrow, .nav, .div-inicio .div-inicio--ul, #grilla .div-inicio--ul, .newsForm--ul-listaGeneros, .reelsGallery, .detalle-estrenos {
+  display: flex;
+  flex-direction: row; }
+
+.flexcolumn, #home .div__ol--resenas, #estrenos .div__ol--resenas, #estrenos .flex-estrenos {
+  display: flex;
+  flex-direction: column; }
+
+/* CSS GENERAL */
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "IM Fell English", cursive;
+  font-weight: 400;
+  background-image: url("../img/cinema-with-popcorn-box.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+
+hr {
+  color: white; }
+
+h1 {
+  color: black;
+  font-size: 2.2rem; }
+
+h3 {
+  font-family: "Josefin Sans", sans-serif; }
+
+.logo-rotate {
+  animation-duration: 4s;
+  animation-name: rotarlogo;
+  animation-iteration-count: 2;
+  animation-delay: 0s;
+  animation-timing-function: linear; }
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  z-index: 1000;
+  height: 130px; }
+
+.margen-sup {
+  margin-top: 160px; }
+
+/* DETERMINAMOS EL EFECTO DE LA ANIMACIÓN */
+@keyframes rotarlogo {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%; }
+
+.carousel-redondeado {
+  margin-top: 10px;
+  border-radius: 8px; }
+
+#grilla {
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 25px;
+  padding: 25px;
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75); }
+  #grilla h1 {
+    color: white; }
+
+section#opciones {
+  margin: auto; }
+
+nav {
+  padding: 15px;
+  height: 100%; }
+
+.grid-medio {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.publi {
+  height: 100%; }
+  .publi img {
+    width: 100%; }
+
+.header__logo {
+  width: 115px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.menu-derecha {
+  justify-content: end; }
+
+.espaciado-menu {
+  width: 500px;
+  justify-content: space-between;
+  align-items: baseline; }
+
+.nav-item {
+  font-family: "Josefin Sans", sans-serif;
+  list-style-type: none;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  color: white; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white; }
+
+.nav-item .nav-link a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s; }
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ff0000; }
+
+.navbar-dark .navbar-nav .nav-link .activa {
+  color: #FF3030; }
+
+.div-inicio {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px dotted black;
+  overflow: hidden;
+  margin: 5% auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 0px black;
+  -moz-box-shadow: 0px 0px 10px 0px black;
+  box-shadow: 0px 0px 10px 0px black; }
+
+/* FIN CSS GENERAL */
+/* CSS INDEX */
+.nav {
+  justify-content: space-evenly; }
+  .nav a {
+    text-decoration: none;
+    color: white; }
+
+.div-inicio .div-inicio--ul {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px; }
+  .div-inicio .div-inicio--ul li {
+    list-style-type: none;
+    font-size: 60px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;
+    transition: 0.3s; }
+    .div-inicio .div-inicio--ul li a {
+      text-decoration: none;
+      color: black;
+      transition: 0.3s; }
+    .div-inicio .div-inicio--ul li:hover {
+      transform: scale(1.05, 1.05); }
+    .div-inicio .div-inicio--ul li a:hover {
+      color: #ff0000; }
+  .div-inicio .div-inicio--ul h3 {
+    font-size: 25px;
+    text-align: center; }
+
+#grilla .div-inicio--ul {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  padding-left: 0px; }
+  #grilla .div-inicio--ul li {
+    list-style-type: none;
+    font-size: 60px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;
+    transition: 0.3s; }
+    #grilla .div-inicio--ul li a {
+      text-decoration: none;
+      color: black;
+      transition: 0.3s; }
+    #grilla .div-inicio--ul li:hover {
+      transform: scale(1.05, 1.05); }
+    #grilla .div-inicio--ul li a:hover {
+      color: #ff0000; }
+  #grilla .div-inicio--ul h3 {
+    font-size: 25px;
+    text-align: center; }
+
+.div-inicio h2 {
+  font-size: 30px;
+  color: black; }
+
+.div-inicio p {
+  text-align: justify;
+  color: #000050; }
+
+.lista-inicio {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px; }
+  .lista-inicio ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .lista-inicio ul li {
+      font-weight: bold;
+      letter-spacing: 1.8px;
+      margin-bottom: 5px;
+      color: black; }
+
+#home .div__h3--resenas {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: white; }
+
+#home .div__ol--resenas {
+  justify-content: space-between;
+  height: 300px; }
+  #home .div__ol--resenas li {
+    padding: 2px;
+    font-size: 16px;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold; }
+
+/* FIN CSS INDEX */
+/* CSS FOOTER */
+footer {
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 40px;
+  width: 100%;
+  background-color: black; }
+
+.textoFooter {
+  color: white;
+  text-align: right; }
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%; }
+
+footer a {
+  text-decoration: none; }
+
+footer li {
+  margin: 10px 0px;
+  color: white;
+  list-style-type: none;
+  transition: .5s; }
+
+footer li:hover {
+  color: #ff0000; }
+
+footer .ul-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+/* FIN CSS FOOTER */
+/* CSS NEWSLETTER */
+.newsForm h3 {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 10px; }
+
+.newsForm--legend {
+  color: black;
+  margin-bottom: 10px; }
+
+.newsForm .inputTexto {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 0px 0px 10px 0px black;
+  -moz-box-shadow: 0px 0px 10px 0px black;
+  box-shadow: 0px 0px 10px 0px black;
+  margin: 5px; }
+
+.newsForm--ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  padding-left: 0px; }
+
+.newsForm--li {
+  list-style-type: none;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: black;
+  margin-top: 15px; }
+
+.newsForm--ul-listaGeneros {
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 0px; }
+  .newsForm--ul-listaGeneros li {
+    list-style-type: none; }
+
+/* FIN CSS NEWSLETTER */
+/* CSS REELS */
+.reels h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: black; }
+
+.reelsGallery {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; }
+  .reelsGallery .img1 {
+    width: 220px;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 2px solid gray; }
+  .reelsGallery .img1:hover {
+    transform: scaleX(1.1); }
+  .reelsGallery .img2 {
+    width: 220px;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 2px solid gray; }
+  .reelsGallery .img2:hover {
+    transform: rotate(-5deg); }
+  .reelsGallery .img3 {
+    width: 220px;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 2px solid gray; }
+  .reelsGallery .img3:hover {
+    transform: rotate(5deg); }
+  .reelsGallery .img4 {
+    width: 220px;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 2px solid gray; }
+  .reelsGallery .img4:hover {
+    transform: scaleY(0.9); }
+  .reelsGallery .img5 {
+    width: 220px;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 2px solid gray; }
+  .reelsGallery .img5:hover {
+    transform: skewX(10deg); }
+
+/* FIN CSS REELS */
+/* NOSOTROS */
+.nosotros h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: black; }
+
+.nosotros p {
+  font-size: 15px;
+  color: black;
+  font-weight: bold; }
+
+/* FIN NOSOTROS */
+/* CSS ESTRENOS */
+section#estrenos {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+#estrenos h3 {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 10px; }
+
+#estrenos span {
+  font-size: 0.7em; }
+
+#estrenos .div__h3--resenas {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #333; }
+
+#estrenos .div__ol--resenas {
+  justify-content: space-between;
+  height: 300px; }
+  #estrenos .div__ol--resenas li {
+    padding: 2px;
+    font-size: 16px;
+    margin-left: 15px;
+    color: #333;
+    font-weight: bold; }
+
+#estrenos .flex-estrenos {
+  justify-content: flex-start;
+  gap: 20px; }
+
+#estrenos img {
+  width: 200px;
+  transition: 1s; }
+
+.contenido-estrenos {
+  border: 0px 1px solid black; }
+
+.detalle-estrenos {
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+
+#estrenos .detalle-estrenos:hover > p {
+  font-weight: 700;
+  color: #ff0000;
+  font-size: 1.05rem; }
+
+.sinopsis-est {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+/* CSS PARA MOBILE */
+@media only screen and (max-width: 600px) {
+  .header__nav {
+    width: 30%; }
+  footer {
+    position: relative;
+    margin-top: 50px; }
+  .textoFooter {
+    text-align: right;
+    margin-right: 10px; }
+  .newsForm {
+    width: 95%; }
+  .newsForm--ul-listaGeneros {
+    flex-direction: column; }
+  .header-grilla {
+    display: none; }
+  .publi img {
+    width: 80%;
+    display: block;
+    margin: auto; }
+  section#estrenos {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); }
+  #estrenos h3 {
+    margin: 10px; }
+  #estrenos span {
+    font-size: 0.7em; }
+  #estrenos .flex-estrenos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px; }
+  #estrenos img {
+    width: 200px; }
+  .div__h3--resenas {
+    font-size: 16px;
+    margin-bottom: 10px; }
+  .sinopsis-est {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .sinopsis-est p {
+      font-size: 0.8em; }
+  section#servicios {
+    margin: 10px 0px; } }
