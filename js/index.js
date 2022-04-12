@@ -57,8 +57,18 @@ boton.addEventListener("click", (evento) => {
     console.log(listUsuarios);
     localStorage.setItem('nombre', nombre);
     localStorage.setItem('apellido', apellido);
+    Swal.fire({
+        icon: 'success',
+        title: 'Felitaciones!',
+        text: `${nombre} felitaciones!`
+      });
     } else {
         document.querySelector(".mensaje").innerHTML = `<div class="alert alert-danger" role="alert">Por favor, completa los datos</div>`;
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Por favor, completa los datos'
+          });
     }
 } );
 
@@ -118,5 +128,7 @@ if (buscarpeli != ''){
 const total = listPeliculas.reduce((acumulador, elemento) => ({puntaje: acumulador.puntaje + elemento.puntaje}));
 let promedio = total.puntaje/i;
 document.write(`<p>El promedio de puntos de las peliculas cargadas es: ${promedio}</p>`);
+
+
 
 
