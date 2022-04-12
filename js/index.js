@@ -11,6 +11,14 @@ const objPeliculas = [];
 
 let consulta = true;
 
+// RECUPERAMOS EL LOCAL STORAGE DEL USUARIO
+document.addEventListener("DOMContentLoaded", function(event) {
+    event.preventDefault();
+    let nombreguardado = localStorage.getItem('nombre');
+    let apellidoguardado = localStorage.getItem('apellido');
+    document.querySelector("#usuario").innerHTML = `<li class="nav-item"><p class="nav-link">Hola ${nombreguardado} ${apellidoguardado}</p></li>`;
+});
+
 class Pelicula{
     
     // CREAMOS EL CONTRUCTOR
@@ -47,10 +55,13 @@ boton.addEventListener("click", (evento) => {
     document.querySelector(".mensaje").innerHTML = `<div class="alert alert-success" role="alert"> ${nombre} felitaciones! Vas a recibir las última novedades en peliculas y series.</div>`;
     listUsuarios.push(new Usuario(nombre, apellido, edad, fechanac));
     console.log(listUsuarios);
+    localStorage.setItem('nombre', nombre);
+    localStorage.setItem('apellido', apellido);
     } else {
         document.querySelector(".mensaje").innerHTML = `<div class="alert alert-danger" role="alert">Por favor, completa los datos</div>`;
     }
 } );
+
 
 // VAMOS GUARDANDO EL RESUMEN DE LO CARGADO
 function guardaPeli(pelicula,genero,puntaje,plataforma){
