@@ -19,6 +19,35 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.querySelector("#usuario").innerHTML = `<li class="nav-item"><p class="nav-link">Hola ${nombreguardado} ${apellidoguardado}</p></li>`;
 });
 
+// FETCH - CONEXION A API DE PELICULAS
+
+const lista = document.querySelector('#listado');
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com',
+		'X-RapidAPI-Key': '3588e5cf3emsh5b93a4a4d65ee7fp13d040jsnb1de369b0de2'
+	}
+};
+
+// BUSCAMOS UN NÚMERO ALEATORIO
+let random = Math.floor(Math.random() * 63) + 1;
+
+async function fetchData() {
+	const response = await fetch(`https://streaming-availability.p.rapidapi.com/search/basic?country=ar&service=netflix&type=movie&genre=18&page=${random}&output_language=es&language=en`, options)
+	const json = await response.json();
+	Array.from(json.results).forEach((post) => {
+		const li = document.createElement('li');
+		li.innerHTML = `<h3>${post.title}</h3><img src=${post.posterURLs[342]}>`;
+		lista.append(li);
+	})
+	console.log(json);
+	return json;
+  }
+
+let data = fetchData();
+
 class Pelicula{
     
     // CREAMOS EL CONTRUCTOR
@@ -44,8 +73,8 @@ class Usuario{
 }
 
 // GUARDAMOS EL USUARIO
-let boton = document.getElementById("guardar");
-boton.addEventListener("click", (evento) => {
+    let boton = document.getElementById("guardar");
+    boton.addEventListener("click", (evento) => {
     evento.preventDefault();
     let nombre = document.querySelector("#nombre").value;
     if (nombre != ''){
@@ -128,6 +157,7 @@ if (buscarpeli != ''){
 const total = listPeliculas.reduce((acumulador, elemento) => ({puntaje: acumulador.puntaje + elemento.puntaje}));
 let promedio = total.puntaje/i;
 document.write(`<p>El promedio de puntos de las peliculas cargadas es: ${promedio}</p>`);
+
 
 
 

@@ -9,10 +9,17 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^7.0.0",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianmiguens5/veoveo-Miguens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/julianmiguens5/veoveo-Miguens/issues"
+  },
+  "homepage": "https://github.com/julianmiguens5/veoveo-Miguens#readme",
   "description": ""
 }

@@ -428,6 +428,17 @@ section#estrenos {
   flex-direction: column;
   justify-content: space-between; }
 
+#listado {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #listado h3 {
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black; }
+
 /* CSS PARA MOBILE */
 @media only screen and (max-width: 600px) {
   .header__nav {
